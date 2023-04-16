@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.contanir {
+    background-color: #bf99fc;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contanir .create {
+    background-color: #fff;
+    padding: 25px 35px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contanir .data {
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contanir .data #inp {
+    outline: none;
+    border: 1px solid #700491;
+    border-radius: 6px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.contanir .data #inp:focus {
+    background-color: #fde0fd94;
+    transform: scale(1.1);
+
+}
+
+.contanir .data #btn {
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: #bf99fc;
+    padding: 4px;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+.contanir .data #btn:hover {
+    background-color: #cc68fa;
+}
+
+.boxs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.boxs .box {
+    background-color: #FFF;
+    width: 20%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.boxs .box:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #bf99fc;
+    border: 3PX solid #cfd8dc;;
+    border-left: none;
+    border-top: none;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    animation-name: upAndDwon;
+    animation-duration: 2.5s ;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    transition: ease 0.3s;
+
+}
+@keyframes upAndDwon{
+    0%{
+        top: -30px;
+
+    }
+
+    50%{
+        top: -20px;
+
+    }
+    60%{
+        top: -20px;
+
+    }
+    0%{
+        top: -30px;
+
+    }
+}
+
+.boxs .box .task {
+    background-color: #bf99fc;
+    margin: 8px 6px;
+    padding: 7px;
+    border-radius: 7px;
+
+    cursor: -webkit-grab;
+
+
+}
+@media only screen and (max-width: 600px) {
+.boxs{
+flex-wrap: wrap;
+row-gap: 34px;
+}
+.boxs .box{
+        width: 40%;
+
+}
+
+}
+
